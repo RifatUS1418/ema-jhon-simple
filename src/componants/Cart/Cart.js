@@ -2,8 +2,7 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
-    const { cart } = props;
-
+    const { cart, children } = props;
 
     // const total = cart.reduce((previous, product) => previous + product.price, 0)
     let totalQuantity = 0;
@@ -29,6 +28,7 @@ const Cart = (props) => {
             <p>Shipping: {shipping}</p>
             <p>Tax: {tax.toFixed(2)}</p>
             <p>Grand Total: {grandTotal.toFixed(2)}</p>
+            <p>{children}</p>
         </div>
     );
 };
